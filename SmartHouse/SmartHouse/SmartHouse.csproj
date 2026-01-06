@@ -73,6 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeviceHandler.cs" />
     <Compile Include="HomeDevices\AC.cs" />
     <Compile Include="HomeDevices\Alexa.cs" />
     <Compile Include="HomeDevices\SchedualdDevice\Boiler.cs" />
@@ -80,14 +81,16 @@
     <Compile Include="HomeDevices\IDevice.cs" />
     <Compile Include="ExternalDataService\IExternalDataService.cs" />
     <Compile Include="DataBases\IJsonDataBase.cs" />
-    <Compile Include="ISchedualDevice.cs" />
+    <Compile Include="HomeDevices\SchedualdDevice\ISchedualDevice.cs" />
     <Compile Include="DataBases\JsonHomeDataBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HomeDevices\SchedualdDevice\SmartLight.cs" />
+    <Compile Include="SchedualDeviceHandler.cs" />
     <Compile Include="SongsInfo.cs" />
     <Compile Include="ExternalDataService\SongsInfoAPIHandler.cs" />
     <Compile Include="ExternalDataService\WeatherAPIHandler.cs" />
+    <Compile Include="Utils.cs" />
     <Compile Include="WeatherInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -10,17 +10,17 @@ namespace SmartHouse
     {
         private readonly string  _jsonPath="homejsonDB.json";
         List<IDevice> _devices;
-        public IDevice GetItmInfo(string id)
+        public async Task<IDevice> GetItemInfo(string id)
         {
             throw new NotImplementedException();
         }
 
-        public void SaveToDB(IDevice item)
+        public async Task SaveToDB(IDevice item)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateDB(IDevice item)
+        public async Task UpdateDB(IDevice item)
         {
             throw new NotImplementedException();
         }

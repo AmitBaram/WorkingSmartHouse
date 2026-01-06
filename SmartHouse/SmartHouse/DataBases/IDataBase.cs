@@ -8,8 +8,8 @@ namespace SmartHouse
 {
     public interface IDataBase<T>
     {
-        void SaveToDB(T item);
-        T GetItmInfo(string id);
-        void UpdateDB(T item);
+        Task SaveToDB(T item);
+        Task<T> GetItemInfo(string id);
+        Task UpdateDB(T item);
     }
 }
