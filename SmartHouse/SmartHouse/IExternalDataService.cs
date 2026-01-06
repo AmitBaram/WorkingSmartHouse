@@ -9,6 +9,6 @@ namespace SmartHouse
     public interface IExternalDataService<T>
     {
         Task<T> GetBasicData(string key);
-        List<T> GetData(string key);
+        Task <List<T>> GetData(string key);
     }
 }
