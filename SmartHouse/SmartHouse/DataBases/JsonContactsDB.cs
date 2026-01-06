@@ -17,6 +17,7 @@ namespace SmartHouse
         {
             LoadFromFile();
         }
+
         public async Task RemoveItem(string id)
         {
             if (_contacts.ContainsKey(id))
@@ -39,6 +40,14 @@ namespace SmartHouse
         {
             // Returns the entire contact list
             return await Task.Run(() => _contacts);
+        }
+        public async Task<List<Dictionary<string, string>>> GetAllItems()
+        {
+            // Create a new list and put the single dictionary inside it
+            var list = new List<Dictionary<string, string>>();
+            list.Add(_contacts);
+
+            return await Task.FromResult(list);
         }
 
         public async Task SaveToDB(Dictionary<string, string> newContacts)
@@ -105,6 +114,7 @@ namespace SmartHouse
                 _contacts = new Dictionary<string, string>();
             }
         }
+
     }
 }
 

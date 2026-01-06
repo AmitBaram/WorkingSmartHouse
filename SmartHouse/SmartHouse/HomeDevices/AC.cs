@@ -8,9 +8,9 @@ namespace SmartHouse
 {
     public class AC : IDevice
     {
-        public bool _isOn { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string _name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string _id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool _isOn { get ; set ; }
+        public string _name { get; set; }
+        public string _id { get; set; }
 
         public int _Temperature { get; set; }
 
@@ -26,12 +26,12 @@ namespace SmartHouse
 
         public void TurnOff()
         {
-            throw new NotImplementedException();
+            this._isOn = false;
         }
 
         public void TurnOn()
         {
-            throw new NotImplementedException();
+            this._isOn = true;
         }
     }
 }

@@ -12,5 +12,6 @@ namespace SmartHouse
         Task<T> GetItemInfo(string id);
         Task UpdateDB(T item);
         Task RemoveItem(string id);
+        Task<List<T>> GetAllItems();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,7 +47,52 @@ namespace SmartHouse
                 throw new Exception($"No schedule found for {datetime} on device {id}");
             }
         }
-        
+        public async Task CheckForSchedual()
+        {
+            DateTime now = DateTime.Now;
+            
+            DateTime currentHourMinute = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
+
+            
+            List<T> devices = await _itemDB.GetAllItems();
+
+            foreach (T d in devices.ToList())
+            {
+                
+                if (d is ISchedualDevice sd)
+                {
+                    
+                    if (sd.SchedualTime != null && sd.SchedualTime.ContainsKey(currentHourMinute))
+                    {
+                        bool shouldBeOn = sd.SchedualTime[currentHourMinute];
+
+                        
+                        if (d is IDevice deviceBase && deviceBase._isOn != shouldBeOn)
+                        {
+                            if (shouldBeOn)
+                            {
+                                sd.TurnOn();
+                                Console.WriteLine($" schedule found for {now} on device {sd._id}, device is turnd on");
+
+                            }
+                                
+                                
+                            else
+                            {
+                                sd.TurnOff();
+                                Console.WriteLine($"No schedule found for {now} on device {sd._id} device is turnd on");
+                            }
+                               
+
+                            
+                            await _itemDB.UpdateDB(d);
+                        }
+                    }
+                }
+            }
+        }
+
+
 
     }
 }

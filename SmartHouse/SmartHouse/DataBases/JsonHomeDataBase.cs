@@ -70,6 +70,37 @@ namespace SmartHouse
             File.WriteAllText(_jsonPath, json);
             await Task.CompletedTask;
         }
+        public async Task<List<T>> GetAllItems() 
+        {
+            // 1. Check if the file exists physically on the disk
+            if (!File.Exists(_jsonPath))
+            {
+                return new List<T>();
+            }
+
+            // 2. Perform the read operation on a background thread to avoid freezing UI
+            return await Task.Run(() =>
+            {
+                try
+                {
+                    // Read the raw text from the file
+                    string json = File.ReadAllText(_jsonPath);
+
+                    // Convert it back into the list of objects
+                    List<T> freshList = JsonConvert.DeserializeObject<List<T>>(json, _settings);
+
+                    // Update the local list to match (optional, but good for consistency)
+                    _devices = freshList ?? new List<T>();
+
+                    return _devices;
+                }
+                catch
+                {
+                    // If the file is corrupted or locked, return an empty list
+                    return new List<T>();
+                }
+            });
+        }
 
         private void LoadFromFile()
         {

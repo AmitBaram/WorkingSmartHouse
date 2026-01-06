@@ -86,7 +86,7 @@
     <Compile Include="DataBases\IJsonDataBase.cs" />
     <Compile Include="HomeDevices\SchedualdDevice\ISchedualDevice.cs" />
     <Compile Include="DataBases\JsonHomeDataBase.cs" />
-    <Compile Include="JsonContactsDB.cs" />
+    <Compile Include="DataBases\JsonContactsDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="HomeDevices\SchedualdDevice\SmartLight.cs" />

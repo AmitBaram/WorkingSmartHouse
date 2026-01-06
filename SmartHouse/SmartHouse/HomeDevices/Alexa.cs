@@ -29,12 +29,12 @@ namespace SmartHouse
 
         public void TurnOff()
         {
-            throw new NotImplementedException();
+            this._isOn = false;
         }
 
         public void TurnOn()
         {
-            throw new NotImplementedException();
+            this._isOn = true;
         }
     }
 }
