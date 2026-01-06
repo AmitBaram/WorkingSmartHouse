@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartHouse
 {
-    public class JsonHomeDataBase : IJsonDataBase<IDevice>
+    public class JsonHomeDataBase : IJsonDataBase<IDevice> 
     {
         private readonly string  _jsonPath="homejsonDB.json";
         List<IDevice> _devices;

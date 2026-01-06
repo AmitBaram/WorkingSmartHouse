@@ -12,6 +12,20 @@ namespace SmartHouse
         {
             return DateTime.Today + new TimeSpan(hour, 0, 0);
         }
+        public static DateTime IntToHour(int hour)
+        {
+            
+            if (hour < 0 || hour > 23)
+            {
+                throw new ArgumentOutOfRangeException("hour", "Hour must be between 0 and 23.");
+            }
 
+           
+            return DateTime.Today.AddHours(hour);
+        }
+        public static DateTime IntHourToDateTime(int hour)
+        {
+            return DateTime.Today.AddHours(hour);
+        }
     }
 }

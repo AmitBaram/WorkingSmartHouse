@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace SmartHouse
 {
-    public class DeviceHandler
+    public class DeviceHandler<T>
     {
-        private readonly IJsonDataBase<IDevice> _deviceDB;
+        protected readonly IJsonDataBase<T> _deviceDB;
 
-        public DeviceHandler(IJsonDataBase<IDevice> dataDevice)
+        public DeviceHandler(IJsonDataBase<T> dataDevice)
         {
             _deviceDB = dataDevice;
         }
-        public async Task  AddToDB(IDevice device)
+        public async Task  AddToDB(T device)
         {
            await  _deviceDB.SaveToDB(device);
         }
