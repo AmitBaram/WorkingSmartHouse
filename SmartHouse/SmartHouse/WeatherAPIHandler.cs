@@ -12,9 +12,9 @@ namespace SmartHouse
     {
         private static readonly HttpClient client = new HttpClient();
         private const string ApiKey = "b367de2e84e925c930ae0476fcb995b0";
-       
 
-        public List<WeatherInfo> GetData(string key)
+
+        public async Task< List<WeatherInfo>> GetData(string key)
         {
             throw new NotImplementedException();
         }

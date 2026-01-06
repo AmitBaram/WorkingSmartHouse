@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SmartHouse
 {
-    internal interface IJsonDataBase
+    public interface IJsonDataBase<T>:IDataBase<T>
     {
+
     }
 }

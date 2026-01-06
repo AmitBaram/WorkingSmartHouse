@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace SmartHouse
 {
-    internal interface IDataBase
+    public interface IDataBase<T>
     {
+        void SaveToDB(T item);
+        T GetItemInfo(string id);
+
+        void UpdateDB();
+
     }
 }
