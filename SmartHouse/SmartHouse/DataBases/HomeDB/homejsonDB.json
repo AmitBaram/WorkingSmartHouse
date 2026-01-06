@@ -1,11 +1,15 @@
 {
-  "$type": "System.Collections.Generic.List`1[[SmartHouse.IDevice, SmartHouse]], mscorlib",
+  "$type": "System.Collections.Generic.List`1[[SmartHouse.Boiler, SmartHouse]], mscorlib",
   "$values": [
     {
-      "$type": "SmartHouse.Alexa, SmartHouse",
-      "_isOn": true,
-      "_name": "yoav",
-      "_id": "AXHLGYQ9"
+      "$type": "SmartHouse.Boiler, SmartHouse",
+      "SchedualTime": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.DateTime, mscorlib],[System.Boolean, mscorlib]], mscorlib",
+        "2026-01-06T10:30:00": false
+      },
+      "_isOn": false,
+      "_name": "TestBoiler",
+      "_id": "MLWMA1SZ"
     }
   ]
 }

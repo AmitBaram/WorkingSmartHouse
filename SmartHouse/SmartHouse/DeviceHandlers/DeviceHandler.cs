@@ -8,19 +8,23 @@ namespace SmartHouse
 {
     public class DeviceHandler<T>
     {
-        protected readonly IJsonDataBase<T> _deviceDB;
+        protected readonly IDataBase<T> _itemDB;
 
-        public DeviceHandler(IJsonDataBase<T> dataDevice)
+        public DeviceHandler(IDataBase<T> dataDevice)
         {
-            _deviceDB = dataDevice;
+            _itemDB = dataDevice;
         }
         public async Task  AddToDB(T device)
         {
-           await  _deviceDB.SaveToDB(device);
+           await _itemDB.SaveToDB(device);
         }
         public async Task GetDeviceById(string id)
         {
-           await _deviceDB.GetItemInfo(id);
+           await _itemDB.GetItemInfo(id);
+        }
+        public virtual async Task RemoveItemByID(string id)
+        {
+            await _itemDB.RemoveItem(id);
         }
     }   
 }
