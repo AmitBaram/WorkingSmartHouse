@@ -14,6 +14,11 @@ namespace SmartHouse
 
         public int _Temperature { get; set; }
 
+        public string GenerateRandomID()
+        {
+            throw new NotImplementedException();
+        }
+
         public void TurnOff()
         {
             throw new NotImplementedException();

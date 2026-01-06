@@ -1,0 +1,11 @@
+{
+  "$type": "System.Collections.Generic.List`1[[SmartHouse.IDevice, SmartHouse]], mscorlib",
+  "$values": [
+    {
+      "$type": "SmartHouse.Alexa, SmartHouse",
+      "_isOn": true,
+      "_name": "yoav",
+      "_id": "AXHLGYQ9"
+    }
+  ]
+}

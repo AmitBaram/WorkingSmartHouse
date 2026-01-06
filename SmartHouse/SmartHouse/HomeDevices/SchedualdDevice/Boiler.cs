@@ -13,6 +13,11 @@ namespace SmartHouse
         public string _name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string _id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+        public string GenerateRandomID()
+        {
+            throw new NotImplementedException();
+        }
+
         public void TurnOff()
         {
             throw new NotImplementedException();

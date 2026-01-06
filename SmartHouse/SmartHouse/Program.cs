@@ -20,8 +20,11 @@ namespace SmartHouse
             //    Console.WriteLine(testInfo._temperature );
             //    Console.WriteLine(testInfo._time);
             //}
-            Console.WriteLine(Utils.GetTodayAtSpecificTime(19)); 
-            
+            Console.WriteLine(Utils.GetTodayAtSpecificTime(19));
+            IDevice alexa = new Alexa(true, "yoav");
+            JsonHomeDataBase jsonHomeDataBase = new JsonHomeDataBase();
+            await jsonHomeDataBase.SaveToDB(alexa);
+
         }
     }
 }

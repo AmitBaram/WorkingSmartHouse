@@ -11,7 +11,7 @@ namespace SmartHouse
 {
     public class JsonHomeDataBase : IJsonDataBase<IDevice> 
     {
-        private readonly string  _jsonPath="homejsonDB.json";
+        private readonly string  _jsonPath= @"C:\Users\yeric\Documents\Amit_Pitoch\GitHub\SamertHouseWorking1\WorkingSmartHouse\SmartHouse\SmartHouse\DataBases\HomeDB\homejsonDB.json";
         List<IDevice> _devices;
         private readonly JsonSerializerSettings _settings = new JsonSerializerSettings
         {
