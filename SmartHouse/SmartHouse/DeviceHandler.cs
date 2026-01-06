@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartHouse
 {
-    public interface IJsonDataBase<T>:IDataBase<T>
+    internal class DeviceHandler
     {
-
     }
 }

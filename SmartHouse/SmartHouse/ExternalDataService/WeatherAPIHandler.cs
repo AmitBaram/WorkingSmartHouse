@@ -14,9 +14,43 @@ namespace SmartHouse
         private const string ApiKey = "b367de2e84e925c930ae0476fcb995b0";
 
 
-        public async Task< List<WeatherInfo>> GetData(string key)
+        public async Task< List<WeatherInfo>> GetData(string cityName)
         {
-            throw new NotImplementedException();
+            List<WeatherInfo> weatherList = new List<WeatherInfo>();
+
+            try
+            {
+               
+                string url = "https://api.open-meteo.com/v1/forecast?latitude=32.08&longitude=34.78&hourly=temperature_2m";
+
+                
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                string responseBody = await response.Content.ReadAsStringAsync();
+
+                using (JsonDocument doc = JsonDocument.Parse(responseBody))
+                {
+                    JsonElement hourly = doc.RootElement.GetProperty("hourly");
+                    JsonElement times = hourly.GetProperty("time");
+                    JsonElement temperatures = hourly.GetProperty("temperature_2m");
+
+                    
+                    for (int i = 0; i < 24; i++)
+                    {
+                        DateTime time = DateTime.Parse(times[i].GetString());
+                        
+                        int temp = (int)Math.Round(temperatures[i].GetDouble());
+
+                        weatherList.Add(new WeatherInfo(cityName, time, temp));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error fetching weather: {ex.Message}");
+            }
+
+            return weatherList;
         }
         public async Task<WeatherInfo> GetBasicData(string cityName)
         {

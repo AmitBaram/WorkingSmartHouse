@@ -13,7 +13,7 @@ namespace SmartHouse
             throw new NotImplementedException();
         }
 
-        public List<SongsInfo> GetData(string key)
+        public Task <List<SongsInfo>> GetData(string key)
         {
             throw new NotImplementedException();
         }

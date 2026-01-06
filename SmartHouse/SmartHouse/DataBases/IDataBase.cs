@@ -9,9 +9,7 @@ namespace SmartHouse
     public interface IDataBase<T>
     {
         void SaveToDB(T item);
-        T GetItemInfo(string id);
-
-        void UpdateDB();
-
+        T GetItmInfo(string id);
+        void UpdateDB(T item);
     }
 }

@@ -14,6 +14,12 @@ namespace SmartHouse
 
             // Added 'await' and the missing semicolon ';'
             WeatherInfo i= await weatherAPIHandler.GetBasicData("Haifa");
+          List<WeatherInfo> test=  await weatherAPIHandler.GetData("Haifa");
+            foreach (WeatherInfo testInfo in test)
+            {
+                Console.WriteLine(testInfo._temperature );
+                Console.WriteLine(testInfo._time);
+            }
             
         }
     }
