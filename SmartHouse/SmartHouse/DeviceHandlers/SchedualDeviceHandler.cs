@@ -47,6 +47,61 @@ namespace SmartHouse
                 throw new Exception($"No schedule found for {datetime} on device {id}");
             }
         }
+        public async Task AutoControlAC(WeatherInfo weather, T device)
+        {
+            
+            if (device is AC airConditioner)
+            {
+                Console.WriteLine($"Current Temp in {weather._cityName}: {weather._temperature}°C");
+
+                bool stateChanged = false;
+
+                
+                if (weather._temperature > 30)
+                {
+                    if (!airConditioner._isOn)
+                    {
+                        Console.WriteLine("It's very hot. Turning AC ON (16°C).");
+                        airConditioner.TurnOn();
+                        airConditioner._Temperature = 16;
+                        stateChanged = true;
+                    }
+                }
+                
+                else if (weather._temperature < 20)
+                {
+                    if (!airConditioner._isOn)
+                    {
+                        Console.WriteLine("It's cold. Turning AC ON (30°C).");
+                        airConditioner.TurnOn();
+                        airConditioner._Temperature = 30;
+                        stateChanged = true;
+                    }
+                }
+                
+                else
+                {
+                    if (airConditioner._isOn)
+                    {
+                        Console.WriteLine("Temperature is comfortable (20-30). Turning AC OFF.");
+                        airConditioner.TurnOff();
+                        stateChanged = true;
+                    }
+                }
+
+                
+                if (stateChanged)
+                {
+                    
+                    await _itemDB.UpdateDB(device);
+                }
+            }
+            else
+            {
+                Console.WriteLine("The device provided is not an AC.");
+            }
+        }
+
         public async Task CheckForSchedual()
         {
             DateTime now = DateTime.Now;

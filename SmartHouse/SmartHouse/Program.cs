@@ -10,53 +10,81 @@ namespace SmartHouse
     {
         static async Task Main(string[] args)
         {
-            // --- 1. SETUP: Create the Database & Handler ---
+            // --- 1. SETUP ---
             var jsonHomeDataBase = new JsonHomeDataBase<Boiler>();
             var boilerHandler = new SchedualDeviceHandler<Boiler>(jsonHomeDataBase);
 
-            // --- 2. PREPARE TEST DATA: Schedule for RIGHT NOW ---
-            // We get the current time and strip the seconds (to match your logic)
+            // Calculate "Now" for the test
             DateTime now = DateTime.Now;
-            DateTime testingTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
+            //DateTime testingTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
+            DateTime testingTime = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0).AddMinutes(5);
 
-            Console.WriteLine($"[Test] Setting schedule for: {testingTime}");
+            Console.WriteLine($"[Test] Target Time: {testingTime}");
 
-            Dictionary<DateTime, bool> schedule = new Dictionary<DateTime, bool>();
+            // --- 2. FIND OR CREATE LOGIC ---
+            // Get all existing boilers
+            List<Boiler> allBoilers = await jsonHomeDataBase.GetAllItems();
 
-            // Add a rule: Turn ON (true) at this exact minute
-            schedule.Add(testingTime, true);
+            // Try to find one with the specific name we want
+            Boiler targetBoiler = allBoilers.FirstOrDefault(b => b._name == "AutoBoiler");
 
-            // --- 3. CREATE DEVICE ---
-            // We start with isOn = false so we can see it change to true
-            Boiler testBoiler = new Boiler(schedule, false, "AutoBoiler");
+            if (targetBoiler != null)
+            {
+                // CASE A: FOUND EXISTING
+                Console.WriteLine($"[Info] Found existing boiler: {targetBoiler._id}");
 
-            // Add to DB (Wait for it to finish)
-            await boilerHandler.AddToDB(testBoiler);
+                // We must ensure it is currently OFF to verify the test works
+                if (targetBoiler._isOn)
+                {
+                    Console.WriteLine("[Setup] Device was ON. Resetting to OFF for test...");
+                    targetBoiler.TurnOff();
+                }
 
-            Console.WriteLine($"[Test] Device '{testBoiler._name}' created. IsOn: {testBoiler._isOn}");
+                // Add/Update the schedule to match RIGHT NOW so the check passes
+                if (targetBoiler.SchedualTime.ContainsKey(testingTime))
+                {
+                    targetBoiler.SchedualTime[testingTime] = true; // Ensure it's set to ON
+                }
+                else
+                {
+                    targetBoiler.SchedualTime.Add(testingTime, true);
+                }
 
-            // --- 4. EXECUTE THE CHECK ---
+                // Save these setup changes to the DB
+                await jsonHomeDataBase.UpdateDB(targetBoiler);
+            }
+            else
+            {
+                // CASE B: CREATE NEW (First Run)
+                Console.WriteLine("[Info] 'AutoBoiler' not found. Creating new one...");
+
+                Dictionary<DateTime, bool> schedule = new Dictionary<DateTime, bool>();
+                schedule.Add(testingTime, true);
+
+                targetBoiler = new Boiler(schedule, false, "AutoBoiler");
+                await boilerHandler.AddToDB(targetBoiler);
+            }
+
+            // --- 3. EXECUTE CHECK ---
             Console.WriteLine("[Test] Running CheckForSchedual()...");
 
-            // This method should find the boiler, see the time matches, turn it ON, and save.
             await boilerHandler.CheckForSchedual();
 
-            // --- 5. VERIFY RESULT ---
-            // Fetch the latest version from the DB to be sure
-            var updatedBoiler = await jsonHomeDataBase.GetItemInfo(testBoiler._id);
+            // --- 4. VERIFY ---
+            // Re-fetch from DB to confirm the change happened on disk
+            var updatedBoiler = await jsonHomeDataBase.GetItemInfo(targetBoiler._id);
 
             Console.WriteLine("------------------------------------------------");
             if (updatedBoiler._isOn)
             {
-                Console.WriteLine("SUCCESS: The Scheduler turned the Boiler ON!");
+                Console.WriteLine($"SUCCESS: The Scheduler found the device{targetBoiler._id} and turned it ON.");
             }
             else
             {
-                Console.WriteLine("FAILED: The Boiler is still OFF.");
+                Console.WriteLine("FAILED: The device remained OFF.");
             }
             Console.WriteLine("------------------------------------------------");
 
-            // Prevent console from closing immediately
             Console.ReadLine();
         }
     }

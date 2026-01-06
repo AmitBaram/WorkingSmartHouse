@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClockManager.cs" />
     <Compile Include="DeviceHandlers\DeviceHandler.cs" />
     <Compile Include="HomeDevices\AC.cs" />
     <Compile Include="HomeDevices\Alexa.cs" />

@@ -15,9 +15,12 @@
       "$type": "SmartHouse.Boiler, SmartHouse",
       "SchedualTime": {
         "$type": "System.Collections.Generic.Dictionary`2[[System.DateTime, mscorlib],[System.Boolean, mscorlib]], mscorlib",
-        "2026-01-06T22:29:00": true
+        "2026-01-06T22:29:00": true,
+        "2026-01-06T23:36:00": true,
+        "2026-01-06T23:37:00": true,
+        "2026-01-06T23:46:00": true
       },
-      "_isOn": true,
+      "_isOn": false,
       "_name": "AutoBoiler",
       "_id": "50VKTJI3"
     },
@@ -30,6 +33,16 @@
       "_isOn": true,
       "_name": "AutoBoiler",
       "_id": "IEX02MKC"
+    },
+    {
+      "$type": "SmartHouse.Boiler, SmartHouse",
+      "SchedualTime": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.DateTime, mscorlib],[System.Boolean, mscorlib]], mscorlib",
+        "2026-01-06T23:28:00": true
+      },
+      "_isOn": true,
+      "_name": "AutoBoiler",
+      "_id": "C74J2RIY"
     }
   ]
 }
