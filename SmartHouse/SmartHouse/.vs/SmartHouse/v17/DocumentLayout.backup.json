@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\amit_pitoch\\smarthouse\\smarthouse\\weatherapihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:weatherapihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\amit_pitoch\\smarthouse\\smarthouse\\iexternaldataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:iexternaldataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\amit_pitoch\\smarthouse\\smarthouse\\smartlight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:smartlight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\amit_pitoch\\smarthouse\\smarthouse\\boiler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:boiler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\amit_pitoch\\smarthouse\\smarthouse\\alexa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:alexa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\amit_pitoch\\smarthouse\\smarthouse\\ac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:ac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\amit_pitoch\\smarthouse\\smarthouse\\ischedualdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:ischedualdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\amit_pitoch\\smarthouse\\smarthouse\\idevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:idevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\amit_pitoch\\smarthouse\\smarthouse\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherAPIHandler.cs",
+              "DocumentMoniker": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\WeatherAPIHandler.cs",
+              "RelativeDocumentMoniker": "WeatherAPIHandler.cs",
+              "ToolTip": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\WeatherAPIHandler.cs",
+              "RelativeToolTip": "WeatherAPIHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T09:40:50.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IExternalDataService.cs",
+              "DocumentMoniker": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\IExternalDataService.cs",
+              "RelativeDocumentMoniker": "IExternalDataService.cs",
+              "ToolTip": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\IExternalDataService.cs",
+              "RelativeToolTip": "IExternalDataService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T09:36:14.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SmartLight.cs",
+              "DocumentMoniker": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\SmartLight.cs",
+              "RelativeDocumentMoniker": "SmartLight.cs",
+              "ToolTip": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\SmartLight.cs",
+              "RelativeToolTip": "SmartLight.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T09:31:40.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Boiler.cs",
+              "DocumentMoniker": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\Boiler.cs",
+              "RelativeDocumentMoniker": "Boiler.cs",
+              "ToolTip": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\Boiler.cs",
+              "RelativeToolTip": "Boiler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T09:30:12.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Alexa.cs",
+              "DocumentMoniker": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\Alexa.cs",
+              "RelativeDocumentMoniker": "Alexa.cs",
+              "ToolTip": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\Alexa.cs",
+              "RelativeToolTip": "Alexa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T09:15:44.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AC.cs",
+              "DocumentMoniker": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\AC.cs",
+              "RelativeDocumentMoniker": "AC.cs",
+              "ToolTip": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\AC.cs",
+              "RelativeToolTip": "AC.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T09:13:02.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ISchedualDevice.cs",
+              "DocumentMoniker": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\ISchedualDevice.cs",
+              "RelativeDocumentMoniker": "ISchedualDevice.cs",
+              "ToolTip": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\ISchedualDevice.cs",
+              "RelativeToolTip": "ISchedualDevice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T09:07:31.511Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IDevice.cs",
+              "DocumentMoniker": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\IDevice.cs",
+              "RelativeDocumentMoniker": "IDevice.cs",
+              "ToolTip": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\IDevice.cs",
+              "RelativeToolTip": "IDevice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T09:01:06.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Amit_Pitoch\\SmartHouse\\SmartHouse\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T08:55:12.276Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
