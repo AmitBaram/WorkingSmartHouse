@@ -8,9 +8,9 @@ namespace SmartHouse
 {
     public class WeatherInfo
     {
-        string _cityName {  get; set; }
-        DateTime _time {  get; set; }
-        int _temperature { get; set; }
+        public string _cityName {  get; set; }
+       public  DateTime _time {  get; set; }
+        public int _temperature { get; set; }
 
         public WeatherInfo(string cityname, DateTime time, int temperature) 
             {

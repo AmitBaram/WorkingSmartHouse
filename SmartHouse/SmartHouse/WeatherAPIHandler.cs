@@ -11,7 +11,7 @@ namespace SmartHouse
     public class WeatherAPIHandler : IExternalDataService<WeatherInfo>
     {
         private static readonly HttpClient client = new HttpClient();
-        private const string ApiKey = "YOUR_API_KEY_HERE";
+        private const string ApiKey = "b367de2e84e925c930ae0476fcb995b0";
        
 
         public List<WeatherInfo> GetData(string key)

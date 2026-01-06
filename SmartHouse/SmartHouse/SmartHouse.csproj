@@ -82,6 +82,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SmartLight.cs" />
+    <Compile Include="SongsInfo.cs" />
+    <Compile Include="SongsInfoAPIHandler.cs" />
     <Compile Include="WeatherAPIHandler.cs" />
     <Compile Include="WeatherInfo.cs" />
   </ItemGroup>

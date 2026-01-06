@@ -8,8 +8,13 @@ namespace SmartHouse
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
+            WeatherAPIHandler weatherAPIHandler = new WeatherAPIHandler();
+
+            // Added 'await' and the missing semicolon ';'
+            WeatherInfo i= await weatherAPIHandler.GetBasicData("Haifa");
+            
         }
     }
 }

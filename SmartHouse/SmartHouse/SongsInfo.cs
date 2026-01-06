@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace SmartHouse
 {
-    internal class SongsInfo
+    public class SongsInfo
     {
+        public string _singer {  get; set; }
+        public string Song { get; set; }
+        DateTime _singerDate {  get; set; }
+
+        public SongsInfo(string singer, string song, DateTime singerDate)
+        {
+            this._singer = singer;
+            this.Song = song;
+            this._singerDate = singerDate;
+        }
     }
 }
