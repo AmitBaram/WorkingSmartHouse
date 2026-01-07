@@ -12,13 +12,13 @@ namespace SmartHouse
         private Timer _timer;
         private int _lastMinute;
         private int _lastHour;
+        private int _lastDay;
 
-        // REMOVED: private readonly SchedualDeviceHandler... 
-        // The ClockManager should not know about the DeviceHandler. 
-        // The App class connects them.
+        
 
         public event Action<DateTime> OnMinuteTick;
         public event Action<DateTime> OnHourTick;
+        public event Func<DateTime, Task<List<WeatherInfo>>> OnMidNight;
 
         public ClockManager()
         {
@@ -50,7 +50,7 @@ namespace SmartHouse
             if (now.Minute != _lastMinute)
             {
                 _lastMinute = now.Minute;
-                // Using ?.Invoke prevents crashes if no one is subscribed
+                
                 OnMinuteTick?.Invoke(now);
             }
         }
@@ -61,6 +61,22 @@ namespace SmartHouse
             {
                 _lastHour = now.Hour;
                 OnHourTick?.Invoke(now);
+            }
+        }
+        private async Task CheckMidNight(DateTime now)
+        {
+            if (now.Hour == 0 && now.Day != _lastDay)
+            {
+                _lastDay = now.Day;
+
+                if (OnMidNight != null)
+                {
+                    Console.WriteLine($"[Clock] Midnight detected! Triggering daily weather update...");
+                    
+                     await OnMidNight.Invoke(now);
+
+                    
+                }
             }
         }
     }

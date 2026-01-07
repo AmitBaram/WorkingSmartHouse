@@ -101,9 +101,7 @@ namespace SmartHouse
 
                     IDevice newDevice = null;
 
-                    // 2. CREATE the device inside the loop
-                    // Because 'new' is called here, the constructor (and Random ID) 
-                    // runs AFTER the delay above.
+                   
                     switch (name)
                     {
                         case "Alexa_Home":

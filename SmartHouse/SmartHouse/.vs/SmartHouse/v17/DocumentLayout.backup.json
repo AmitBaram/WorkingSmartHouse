@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:devicehandlers\\devicehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\homedevices\\ac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:homedevices\\ac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\homedevices\\alexa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:homedevices\\alexa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\databases\\jsonhomedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:databases\\jsonhomedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\homedevices\\ac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:homedevices\\ac.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,16 +98,16 @@
               "Title": "DeviceHandler.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\DeviceHandlers\\DeviceHandler.cs",
               "RelativeDocumentMoniker": "DeviceHandlers\\DeviceHandler.cs",
-              "ToolTip": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\DeviceHandlers\\DeviceHandler.cs*",
-              "RelativeToolTip": "DeviceHandlers\\DeviceHandler.cs*",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAqwGgAAAAXAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\DeviceHandlers\\DeviceHandler.cs",
+              "RelativeToolTip": "DeviceHandlers\\DeviceHandler.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAEAAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-07T10:37:47.334Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Alexa.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\HomeDevices\\Alexa.cs",
               "RelativeDocumentMoniker": "HomeDevices\\Alexa.cs",
@@ -120,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AC.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\HomeDevices\\AC.cs",
               "RelativeDocumentMoniker": "HomeDevices\\AC.cs",
@@ -133,7 +133,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "JsonHomeDataBase.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\DataBases\\JsonHomeDataBase.cs",
               "RelativeDocumentMoniker": "DataBases\\JsonHomeDataBase.cs",

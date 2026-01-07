@@ -31,7 +31,7 @@ namespace SmartHouse
             //   a. Check/Create DB
             //   b. Subscribe to Clock Events (Minute/Hour ticks)
             //   c. Start the Clock
-            //   d. Launch the interactive Menu loop
+            //   d. Launch the interactive Menu loop3
             try
             {
                 await smartHouseApp.Start();
