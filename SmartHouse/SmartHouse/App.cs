@@ -32,13 +32,25 @@ namespace SmartHouse
                 await _deviceHandler.FactoryDevices();
             }
 
-            
-            _clock.OnMinuteTick += async (time) => await _deviceHandler.CheckForSchedual(time);
 
-            
-            _clock.OnHourTick += async (time) => await _deviceHandler.AutoControlAC("Hiafa");
+            _clock.OnMinuteTick += async (time) =>
+            {
+                // VISUAL PROOF: Print a dot or message every minute
+                Console.WriteLine($"\n[Event] Minute Tick: {time:HH:mm}");
 
-            
+                await _deviceHandler.CheckForSchedual(time);
+            };
+
+            // 2. Hour Tick (Auto AC)
+            _clock.OnHourTick += async (time) =>
+            {
+                // VISUAL PROOF: Print message every hour
+                Console.WriteLine($"\n[Event] Hour Tick: {time:HH:mm} - Checking AC...");
+
+                await _deviceHandler.AutoControlAC("Haifa");
+            };
+
+
             _clock.OnStart();
             await ShowMenu();
         }

@@ -88,28 +88,47 @@ namespace SmartHouse
             schedule.Add(cleanDate, true);
             schedule.Add(cleanDate.AddHours(5), false);
 
-            var factoryList = new List<IDevice>
-    {
-        new Alexa(true, "Alexa_Home"),
-        new Boiler(schedule, false, "Boiler"),
-        new SmartLight(true, schedule, "smartLight"),
-        new AC(true, "AC", 24)
-    };
+            // We create an array of "Actions" or simply handle them one by one 
+            // to ensure the 'new' keyword is called AFTER a delay.
+            string[] deviceNames = { "Alexa_Home", "Boiler", "smartLight", "AC" };
 
-            foreach (var device in factoryList)
+            foreach (var name in deviceNames)
             {
-                if (device is T typedDevice)
+                try
                 {
-                    try
+                    // 1. WAIT first to ensure the system clock moves forward
+                    await Task.Delay(200);
+
+                    IDevice newDevice = null;
+
+                    // 2. CREATE the device inside the loop
+                    // Because 'new' is called here, the constructor (and Random ID) 
+                    // runs AFTER the delay above.
+                    switch (name)
+                    {
+                        case "Alexa_Home":
+                            newDevice = new Alexa(true, name);
+                            break;
+                        case "Boiler":
+                            newDevice = new Boiler(schedule, false, name);
+                            break;
+                        case "smartLight":
+                            newDevice = new SmartLight(true, schedule, name);
+                            break;
+                        case "AC":
+                            newDevice = new AC(true, name, 24);
+                            break;
+                    }
+
+                    if (newDevice is T typedDevice)
                     {
                         await _itemDB.SaveToDB(typedDevice);
-                        Console.WriteLine($"[Factory] Created: {device._name}");
+                        Console.WriteLine($"[Factory] Created: {name} (ID: {newDevice._id})");
                     }
-                    catch (Exception ex) // Capture the error variable 'ex'
-                    {
-                        // FIX: Print the ACTUAL error message
-                        Console.WriteLine($"[Error] Could not save {device._name}: {ex.Message}");
-                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[Error] Could not save {name}: {ex.Message}");
                 }
             }
         }

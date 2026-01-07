@@ -11,7 +11,7 @@ namespace SmartHouse
         public bool _isOn { get ; set ; }
         public string _name { get; set; }
         public string _id { get; set; }
-        public int _Temperature { get; set; }
+        public double _Temperature { get; set; }
 
         public AC()
         {

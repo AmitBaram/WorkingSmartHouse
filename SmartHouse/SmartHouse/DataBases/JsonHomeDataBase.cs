@@ -106,16 +106,36 @@ namespace SmartHouse
         {
             if (!File.Exists(_jsonPath))
             {
+                Console.WriteLine("[DB] File not found. Starting fresh.");
+                // CRITICAL: Ensure the list is empty so Factory can add new ones
                 _devices = new List<T>();
                 return;
             }
+
             try
             {
                 string json = File.ReadAllText(_jsonPath);
-                _devices = JsonConvert.DeserializeObject<List<T>>(json, _settings) ?? new List<T>();
+                _devices = JsonConvert.DeserializeObject<List<T>>(json, _settings);
+
+                if (_devices == null)
+                {
+                    Console.WriteLine("[DB] Warning: JSON file existed but was empty/null.");
+                    _devices = new List<T>();
+                }
+                else
+                {
+                    Console.WriteLine($"[DB] Loaded {_devices.Count} devices from file.");
+                }
             }
-            catch
+            catch (Exception ex)
             {
+                // THIS IS THE CRITICAL FIX: Print the error!
+                Console.WriteLine($"\n[CRITICAL DB ERROR] Failed to load JSON file!");
+                Console.WriteLine($"Error Message: {ex.Message}");
+                Console.WriteLine($"Make sure all device classes (AC, Boiler, etc.) have a 'public ClassName() {{ }}' constructor.\n");
+
+                // We initialize it to empty so the app doesn't crash, 
+                // BUT now you will see the error message in the console.
                 _devices = new List<T>();
             }
         }
