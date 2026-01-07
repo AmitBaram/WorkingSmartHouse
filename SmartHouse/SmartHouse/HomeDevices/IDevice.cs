@@ -13,7 +13,11 @@ namespace SmartHouse
         string _id { get; set; }
 
 
+
         void TurnOn();
         void TurnOff();
+
+        string GenerateRandomID();
+        
     }
 }
