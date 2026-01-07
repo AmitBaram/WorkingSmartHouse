@@ -60,68 +60,7 @@ namespace SmartHouse
             }
         }
 
-        public async Task AutoControlAC(string cityName)
-        {
-            // 1. Get ALL devices (Mix of AC, Boiler, Alexa...)
-            List<T> allDevices = await _itemDB.GetAllItems();
-
-            // 2. Get Weather
-            var weatherApi = new WeatherAPIHandler();
-            WeatherInfo weather = await weatherApi.GetBasicData(cityName);
-
-            if (weather == null)
-            {
-                Console.WriteLine($"[Error] Could not fetch weather for {cityName}.");
-                return;
-            }
-
-            Console.WriteLine($"[Auto AC] Current Temp in {weather._cityName}: {weather._temperature}°C");
-
-            // 3. Loop through everything
-            foreach (var device in allDevices)
-            {
-                // 4. Only act if the device is specifically an AC
-                if (device is AC airConditioner)
-                {
-                    bool stateChanged = false;
-
-                    if (weather._temperature > 30)
-                    {
-                        if (!airConditioner._isOn)
-                        {
-                            Console.WriteLine($" -> Hot! Turning ON {airConditioner._name} (16°C).");
-                            airConditioner.TurnOn();
-                            airConditioner._Temperature = 16;
-                            stateChanged = true;
-                        }
-                    }
-                    else if (weather._temperature < 20)
-                    {
-                        if (!airConditioner._isOn)
-                        {
-                            Console.WriteLine($" -> Cold! Turning ON {airConditioner._name} (30°C).");
-                            airConditioner.TurnOn();
-                            airConditioner._Temperature = 30;
-                            stateChanged = true;
-                        }
-                    }
-                    else
-                    {
-                        if (airConditioner._isOn)
-                        {
-                            Console.WriteLine($" -> Comfortable. Turning OFF {airConditioner._name}.");
-                            airConditioner.TurnOff();
-                            stateChanged = true;
-                        }
-                    }
-
-                    if (stateChanged)
-                    {
-                        await _itemDB.UpdateDB(device);
-                    }
-                }
-            }
-        }
+        
 
         // This method handles adding/updating a schedule via Console Input
         public async Task ChangeSchedual(string id)

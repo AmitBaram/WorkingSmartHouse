@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\schedualerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:schedualerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\clockmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:clockmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\weatherinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:weatherinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\devicehandlers\\devicehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:devicehandlers\\devicehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,18 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\databases\\jsonhomedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:databases\\jsonhomedatabase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|c:\\users\\yeric\\documents\\amit_pitoch\\github\\samerthouseworking1\\workingsmarthouse\\smarthouse\\smarthouse\\app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\weatherinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|solutionrelative:weatherinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3FEA6F4C-9BF9-482D-A9F7-EAAF8F2C82F5}|SmartHouse.csproj|C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\songsinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -95,6 +103,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SchedualerService.cs",
+              "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\SchedualerService.cs",
+              "RelativeDocumentMoniker": "SchedualerService.cs",
+              "ToolTip": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\SchedualerService.cs*",
+              "RelativeToolTip": "SchedualerService.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T12:22:29.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClockManager.cs",
+              "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\ClockManager.cs",
+              "RelativeDocumentMoniker": "ClockManager.cs",
+              "ToolTip": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\ClockManager.cs*",
+              "RelativeToolTip": "ClockManager.cs*",
+              "ViewState": "AgIAACwAAAAAAAAAAAAwwEoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T12:03:11.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "DeviceHandler.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\DeviceHandlers\\DeviceHandler.cs",
               "RelativeDocumentMoniker": "DeviceHandlers\\DeviceHandler.cs",
@@ -107,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Alexa.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\HomeDevices\\Alexa.cs",
               "RelativeDocumentMoniker": "HomeDevices\\Alexa.cs",
@@ -120,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "AC.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\HomeDevices\\AC.cs",
               "RelativeDocumentMoniker": "HomeDevices\\AC.cs",
@@ -133,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "JsonHomeDataBase.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\DataBases\\JsonHomeDataBase.cs",
               "RelativeDocumentMoniker": "DataBases\\JsonHomeDataBase.cs",
@@ -146,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "App.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\App.cs",
               "RelativeDocumentMoniker": "App.cs",
@@ -159,43 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "SongsInfoAPIHandler.cs",
-              "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\SongsInfoAPIHandler.cs",
-              "RelativeDocumentMoniker": "SongsInfoAPIHandler.cs",
-              "ToolTip": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\SongsInfoAPIHandler.cs",
-              "RelativeToolTip": "SongsInfoAPIHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T13:08:26.658Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SongsInfo.cs",
-              "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\SongsInfo.cs",
-              "RelativeDocumentMoniker": "SongsInfo.cs",
-              "ToolTip": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\SongsInfo.cs",
-              "RelativeToolTip": "SongsInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T12:56:32.357Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IContant.cs",
-              "DocumentMoniker": "C:\\Amit_Pitoch\\SolidPractices\\SolidPractices\\IContant.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Amit_Pitoch\\SolidPractices\\SolidPractices\\IContant.cs",
-              "ToolTip": "C:\\Amit_Pitoch\\SolidPractices\\SolidPractices\\IContant.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Amit_Pitoch\\SolidPractices\\SolidPractices\\IContant.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T10:01:04.821Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "WeatherAPIHandler.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\WeatherAPIHandler.cs",
               "RelativeDocumentMoniker": "WeatherAPIHandler.cs",
@@ -207,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "IExternalDataService.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\IExternalDataService.cs",
               "RelativeDocumentMoniker": "IExternalDataService.cs",
@@ -219,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "SmartLight.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\SmartLight.cs",
               "RelativeDocumentMoniker": "SmartLight.cs",
@@ -231,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Boiler.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\Boiler.cs",
               "RelativeDocumentMoniker": "Boiler.cs",
@@ -243,7 +241,69 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 4,
+              "Title": "WeatherInfo.cs",
+              "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\WeatherInfo.cs",
+              "RelativeDocumentMoniker": "WeatherInfo.cs",
+              "ToolTip": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\WeatherInfo.cs",
+              "RelativeToolTip": "WeatherInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T10:29:32.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\Program.cs*",
+              "RelativeToolTip": "Program.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAqwCEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T08:55:12.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IContant.cs",
+              "DocumentMoniker": "C:\\Amit_Pitoch\\SolidPractices\\SolidPractices\\IContant.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Amit_Pitoch\\SolidPractices\\SolidPractices\\IContant.cs",
+              "ToolTip": "C:\\Amit_Pitoch\\SolidPractices\\SolidPractices\\IContant.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Amit_Pitoch\\SolidPractices\\SolidPractices\\IContant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T10:01:04.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SongsInfo.cs",
+              "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\SongsInfo.cs",
+              "RelativeDocumentMoniker": "SongsInfo.cs",
+              "ToolTip": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\SongsInfo.cs",
+              "RelativeToolTip": "SongsInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T12:56:32.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SongsInfoAPIHandler.cs",
+              "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\SongsInfoAPIHandler.cs",
+              "RelativeDocumentMoniker": "SongsInfoAPIHandler.cs",
+              "ToolTip": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\SongsInfoAPIHandler.cs",
+              "RelativeToolTip": "SongsInfoAPIHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T13:08:26.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Alexa.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\Alexa.cs",
               "RelativeDocumentMoniker": "Alexa.cs",
@@ -255,7 +315,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "AC.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\AC.cs",
               "RelativeDocumentMoniker": "AC.cs",
@@ -267,32 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAiwC8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T08:55:12.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "WeatherInfo.cs",
-              "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\WeatherInfo.cs",
-              "RelativeDocumentMoniker": "WeatherInfo.cs",
-              "ToolTip": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\WeatherInfo.cs",
-              "RelativeToolTip": "WeatherInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T10:29:32.679Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "SolidPractices.csproj",
               "DocumentMoniker": "C:\\Amit_Pitoch\\SolidPractices\\SolidPractices\\SolidPractices.csproj",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Amit_Pitoch\\SolidPractices\\SolidPractices\\SolidPractices.csproj",
@@ -304,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Blog.cs",
               "DocumentMoniker": "C:\\Amit_Pitoch\\SolidPractices\\SolidPractices\\Blog.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Amit_Pitoch\\SolidPractices\\SolidPractices\\Blog.cs",
@@ -316,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "ISchedualDevice.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\ISchedualDevice.cs",
               "RelativeDocumentMoniker": "ISchedualDevice.cs",
@@ -328,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "IDevice.cs",
               "DocumentMoniker": "C:\\Users\\yeric\\Documents\\Amit_Pitoch\\GitHub\\SamertHouseWorking1\\WorkingSmartHouse\\SmartHouse\\SmartHouse\\IDevice.cs",
               "RelativeDocumentMoniker": "IDevice.cs",
@@ -340,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "IValidator.cs",
               "DocumentMoniker": "C:\\Amit_Pitoch\\SolidPractices\\SolidPractices\\IValidator.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\Amit_Pitoch\\SolidPractices\\SolidPractices\\IValidator.cs",

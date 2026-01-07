@@ -21,7 +21,7 @@ namespace SmartHouse
         /// </summary>
         public async Task AutoControlACByWeather(string cityName)
         {
-            // Uses GetBasicData from your interface
+            
             WeatherInfo weather = await _weatherService.GetBasicData(cityName);
 
             if (weather == null)
@@ -70,9 +70,7 @@ namespace SmartHouse
             }
         }
 
-        /// <summary>
-        /// Logic for Midnight Event: Returns the 24-hour forecast list.
-        /// </summary>
+       
         public async Task<List<WeatherInfo>> GetDailyWeatherReport(string cityName)
         {
             Console.WriteLine($"[Scheduler] Fetching daily forecast list for {cityName}...");

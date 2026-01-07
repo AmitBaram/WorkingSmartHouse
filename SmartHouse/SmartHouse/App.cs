@@ -14,6 +14,8 @@ namespace SmartHouse
         private readonly SchedualDeviceHandler<IDevice> _deviceHandler;
         private readonly IExternalDataService<WeatherInfo> _externalDataService;
 
+        private WeatherService _weatherAutomation;
+        private readonly MultimediaController _multimedia;
 
 
         public App(ClockManager clock, SchedualDeviceHandler<IDevice> deviceHandler, IExternalDataService<WeatherInfo> externalDataService)
@@ -21,6 +23,10 @@ namespace SmartHouse
             _clock = clock;
             _deviceHandler = deviceHandler;
             _externalDataService = externalDataService;
+
+            _weatherAutomation = new WeatherService(_deviceHandler, _externalDataService);
+            var songApi = new SongsInfoAPIHandler();
+            _multimedia = new MultimediaController(songApi);
         }
 
         public async Task Start()
@@ -47,8 +53,9 @@ namespace SmartHouse
                 // VISUAL PROOF: Print message every hour
                 Console.WriteLine($"\n[Event] Hour Tick: {time:HH:mm} - Checking AC...");
 
-                await _deviceHandler.AutoControlAC("Haifa");
+                await _weatherAutomation.AutoControlACByWeather("Haifa");
             };
+
 
 
             _clock.OnStart();
@@ -87,7 +94,7 @@ namespace SmartHouse
                     case "5":
                         Console.Write("Enter Artist Name: ");
                         string artist = Console.ReadLine();
-                        await _deviceHandler.GetInfoFromApi(artist);
+                        await _multimedia.SearchAndDisplaySong(artist);
                         break;
                     case "6":
                         Console.WriteLine("Exiting Menu...");
