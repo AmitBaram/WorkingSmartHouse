@@ -10,65 +10,39 @@ namespace SmartHouse
     {
         static async Task Main(string[] args)
         {
+            Console.Title = "Smart House Control System";
             Console.WriteLine("--- Initializing Smart House System ---");
 
-            // 1. Create Database & Handler
+            // 1. Create the Database (Stores all IDevices: AC, Boiler, Alexa, Light)
             var database = new JsonHomeDataBase<IDevice>();
+
+            // 2. Create the Handler (Logic for devices)
             var deviceHandler = new SchedualDeviceHandler<IDevice>(database);
 
-            // 2. Services
+            // 3. Create Services
             var clock = new ClockManager();
             var weatherService = new WeatherAPIHandler();
 
-            // --- VERIFICATION STEP: Print what is currently in the JSON ---
-            Console.WriteLine("\n[System] Loading devices from JSON...");
-            List<IDevice> currentDevices = await database.GetAllItems();
-
-            if (currentDevices.Count > 0)
-            {
-                Console.WriteLine($"[System] Found {currentDevices.Count} devices in DB:");
-                foreach (var device in currentDevices)
-                {
-                    Console.WriteLine($"   - Name: {device._name,-15} | ID: {device._id,-10} | Type: {device.GetType().Name}");
-                }
-            }
-            else
-            {
-                Console.WriteLine("[System] Database is empty. Factory devices will be created.");
-            }
-            Console.WriteLine("--------------------------------------------\n");
-
-            // --- MANUAL CHECK: Only add AC if it's missing ---
-            // We check if "AC" is already in the list we just loaded
-            bool acExists = currentDevices.Any(d => d._name == "AC" || d is AC);
-
-            if (!acExists)
-            {
-                Console.WriteLine("[Program] AC missing. Adding manual AC...");
-                try
-                {
-                    AC livingRoomAc = new AC(false, "AC", 24);
-                    // Use a specific ID if you want to be sure
-                    livingRoomAc._id = "AC_MANUAL_01";
-                    await deviceHandler.AddToDB(livingRoomAc);
-                    Console.WriteLine($"[Success] Added {livingRoomAc._name} to database.");
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"[Info] Could not add AC: {ex.Message}");
-                }
-            }
-            else
-            {
-                Console.WriteLine("[Program] AC already exists in JSON. Skipping manual add.");
-            }
-
-            // 3. Initialize & Start App
+            // 4. Initialize the App
             App smartHouseApp = new App(clock, deviceHandler, weatherService);
-            await smartHouseApp.Start();
 
-            Console.WriteLine("\n[System] System is running. Press [Enter] to exit.");
-            Console.ReadLine();
+            // 5. Start the System
+            // This will:
+            //   a. Check/Create DB
+            //   b. Subscribe to Clock Events (Minute/Hour ticks)
+            //   c. Start the Clock
+            //   d. Launch the interactive Menu loop
+            try
+            {
+                await smartHouseApp.Start();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[CRITICAL ERROR] Application crashed: {ex.Message}");
+            }
+
+            // 6. Shutdown
+            Console.WriteLine("\n[System] Shutting down...");
         }
     }
 }

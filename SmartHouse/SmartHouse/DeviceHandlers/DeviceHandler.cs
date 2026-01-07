@@ -15,38 +15,35 @@ namespace SmartHouse
         public DeviceHandler(IDataBase<T> dataDevice)
         {
             _itemDB = dataDevice;
+            _songInfoAPI = new SongsInfoAPIHandler();
         }
-        public bool  CheckIfDBExist()
+        public async Task<List<T>> GetAllDevices()
+        {
+            return await _itemDB.GetAllItems();
+        }
+
+        // 2. Update Device (For "Turn On/Off")
+        public async Task UpdateDevice(T device)
+        {
+            await _itemDB.UpdateDB(device);
+        }
+        public bool CheckIfDBExist()
         {
             if (_itemDB == null) return false;
-
             try
             {
-                // 1. Actually fetch the list from the DB
-                // We use GetAwaiter().GetResult() to safely block since this method returns bool, not Task
                 List<T> items = _itemDB.GetAllItems().GetAwaiter().GetResult();
-
-                // 2. Check if the list has any items
-                if (items != null && items.Count > 0)
-                {
-                    return true; // DB exists and has data
-                }
-
-                return false; // DB is empty (or list was null)
+                return items != null && items.Count > 0;
             }
-            catch (Exception)
-            {
-                // If the file doesn't exist or can't be read, treat it as empty
-                return false;
-            }
+            catch { return false; }
         }
         public async Task  AddToDB(T device)
         {
            await _itemDB.SaveToDB(device);
         }
-        public async Task GetDeviceById(string id)
+        public async Task<T> GetDeviceById(string id)
         {
-           await _itemDB.GetItemInfo(id);
+            return await _itemDB.GetItemInfo(id);
         }
         public virtual async Task RemoveItemByID(string id)
         {
