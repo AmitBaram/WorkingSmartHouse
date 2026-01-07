@@ -47,64 +47,84 @@ namespace SmartHouse
                 throw new Exception($"No schedule found for {datetime} on device {id}");
             }
         }
-        public async Task AutoControlAC(WeatherInfo weather, T device)
+        public async Task AutoControlAC(string cityName)
         {
             
-            if (device is AC airConditioner)
+            List<T> allDevices = await _itemDB.GetAllItems();
+
+            
+            var weatherApi = new WeatherAPIHandler();
+            WeatherInfo weather = await weatherApi.GetBasicData(cityName);
+
+            if (weather == null)
             {
-                Console.WriteLine($"Current Temp in {weather._cityName}: {weather._temperature}°C");
-
-                bool stateChanged = false;
-
-                
-                if (weather._temperature > 30)
-                {
-                    if (!airConditioner._isOn)
-                    {
-                        Console.WriteLine("It's very hot. Turning AC ON (16°C).");
-                        airConditioner.TurnOn();
-                        airConditioner._Temperature = 16;
-                        stateChanged = true;
-                    }
-                }
-                
-                else if (weather._temperature < 20)
-                {
-                    if (!airConditioner._isOn)
-                    {
-                        Console.WriteLine("It's cold. Turning AC ON (30°C).");
-                        airConditioner.TurnOn();
-                        airConditioner._Temperature = 30;
-                        stateChanged = true;
-                    }
-                }
-                
-                else
-                {
-                    if (airConditioner._isOn)
-                    {
-                        Console.WriteLine("Temperature is comfortable (20-30). Turning AC OFF.");
-                        airConditioner.TurnOff();
-                        stateChanged = true;
-                    }
-                }
-
-                
-                if (stateChanged)
-                {
-                    
-                    await _itemDB.UpdateDB(device);
-                }
+                Console.WriteLine($"[Error] Could not fetch weather for {cityName}. Aborting AC control.");
+                return;
             }
-            else
+
+            Console.WriteLine($"[Auto AC] Current Temp in {weather._cityName}: {weather._temperature}°C");
+
+           
+            foreach (var device in allDevices)
             {
-                Console.WriteLine("The device provided is not an AC.");
+               
+                if (device is AC airConditioner)
+                {
+                    bool stateChanged = false;
+
+                   
+                    if (weather._temperature > 30)
+                    {
+                        
+                        if (!airConditioner._isOn)
+                        {
+                            Console.WriteLine($" -> It's hot! Turning ON {airConditioner._name} (16°C).");
+                            airConditioner.TurnOn();
+                            airConditioner._Temperature = 16;
+                            stateChanged = true;
+                        }
+                    }
+                    else if (weather._temperature < 20)
+                    {
+                       
+                        if (!airConditioner._isOn)
+                        {
+                            Console.WriteLine($" -> It's cold! Turning ON {airConditioner._name} (30°C).");
+                            airConditioner.TurnOn();
+                            airConditioner._Temperature = 30;
+                            stateChanged = true;
+                        }
+                    }
+                    else
+                    {
+                        
+                        if (airConditioner._isOn)
+                        {
+                            Console.WriteLine($" -> Temp is comfortable. Turning OFF {airConditioner._name}.");
+                            airConditioner.TurnOff();
+                            stateChanged = true;
+                        }
+                    }
+
+                    
+                    if (stateChanged)
+                    {
+                        await _itemDB.UpdateDB(device);
+                        Console.WriteLine($" -> Database updated for {airConditioner._name}.");
+                    }
+                }
             }
         }
 
-        public async Task CheckForSchedual()
+        public async Task ChangeSchedual(string id)
         {
-            DateTime now = DateTime.Now;
+           
+           
+        }
+
+        public async Task CheckForSchedual(DateTime now)
+        {
+            
             
             DateTime currentHourMinute = new DateTime(now.Year, now.Month, now.Day, now.Hour, now.Minute, 0);
 

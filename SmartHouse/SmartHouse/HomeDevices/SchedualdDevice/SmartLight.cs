@@ -8,10 +8,18 @@ namespace SmartHouse
 {
     public class SmartLight : ISchedualDevice
     {
-        public Dictionary<DateTime, bool> SchedualTime { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool _isOn { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string _name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string _id { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public Dictionary<DateTime, bool> SchedualTime { get ; set; }
+        public bool _isOn { get ; set ; }
+        public string _name { get; set; }
+        public string _id { get ; set ; }
+        public SmartLight(bool ison, Dictionary<DateTime, bool> schedualTime, string name)
+        {
+            _isOn = ison;
+            _name = name;
+            _id = GenerateRandomID();
+            SchedualTime=schedualTime;
+        }
+        
 
         public string GenerateRandomID()
         {

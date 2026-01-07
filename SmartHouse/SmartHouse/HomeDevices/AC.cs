@@ -13,6 +13,13 @@ namespace SmartHouse
         public string _id { get; set; }
 
         public int _Temperature { get; set; }
+        public AC(bool isOn, string name, int temperature)
+        {
+            _isOn = isOn;
+            _name = name;
+            _id = GenerateRandomID();
+            _Temperature = temperature;
+        }
 
         public string GenerateRandomID()
         {

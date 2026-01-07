@@ -10,7 +10,7 @@ namespace SmartHouse
     {
         public string _singer {  get; set; }
         public string Song { get; set; }
-        DateTime _singerDate {  get; set; }
+       public  DateTime _singerDate {  get; set; }
 
         public SongsInfo(string singer, string song, DateTime singerDate)
         {

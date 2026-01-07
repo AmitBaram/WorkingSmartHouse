@@ -9,10 +9,36 @@ namespace SmartHouse
     public class DeviceHandler<T>
     {
         protected readonly IDataBase<T> _itemDB;
+        private readonly SongsInfoAPIHandler _songInfoAPI;
+       
 
         public DeviceHandler(IDataBase<T> dataDevice)
         {
             _itemDB = dataDevice;
+        }
+        public bool CheckIfDBExist()
+        {
+            if (_itemDB == null) return false;
+
+            try
+            {
+                // 1. Actually fetch the list from the DB
+                // We use GetAwaiter().GetResult() to safely block since this method returns bool, not Task
+                List<T> items = _itemDB.GetAllItems().GetAwaiter().GetResult();
+
+                // 2. Check if the list has any items
+                if (items != null && items.Count > 0)
+                {
+                    return true; // DB exists and has data
+                }
+
+                return false; // DB is empty (or list was null)
+            }
+            catch (Exception)
+            {
+                // If the file doesn't exist or can't be read, treat it as empty
+                return false;
+            }
         }
         public async Task  AddToDB(T device)
         {
@@ -25,6 +51,68 @@ namespace SmartHouse
         public virtual async Task RemoveItemByID(string id)
         {
             await _itemDB.RemoveItem(id);
+        }
+        public virtual async Task GetInfoFromApi(string singerName)
+        {
+            
+
+            Console.WriteLine($"\n[System] Searching for top song by '{singerName}'...");
+
+            
+            SongsInfo song = await _songInfoAPI.GetBasicData(singerName);
+
+           
+            if (song != null)
+            {
+                Console.WriteLine("------------------------------------------------");
+                Console.WriteLine("🎵  SONG FOUND  🎵");
+                Console.WriteLine($"   Artist:   {song._singer}");
+                Console.WriteLine($"   Track:    {song.Song}");
+                
+                Console.WriteLine($"   Released: {song._singerDate:yyyy-MM-dd}");
+                Console.WriteLine("------------------------------------------------");
+            }
+            else
+            {
+                Console.WriteLine($"[System] No songs found for artist: {singerName}");
+            }
+
+            
+        }
+
+        public async Task FactoryDevices()
+        {
+            DateTime date = DateTime.Now;
+            Dictionary<DateTime, bool> schedule = new Dictionary<DateTime, bool>();
+            schedule.Add(date, true);
+            schedule.Add(date.AddHours(5), false);
+            var list = new List<IDevice>();
+            IDevice Alexa = new Alexa(true, "Alexa_Home");
+            IDevice Boiler = new Boiler(schedule, false, "Boiler");
+            IDevice smartLight = new SmartLight(true, schedule, "smartLight");
+            IDevice AC = new AC(true, "AC", 24);
+            list.Add(Alexa);
+            list.Add(Boiler);
+            list.Add(smartLight);
+            list.Add(AC);
+            foreach (var device in list)
+            {
+                // We cast to T to ensure it fits the generic database
+                if (device is T typedDevice)
+                {
+                    try
+                    {
+                        await _itemDB.SaveToDB(typedDevice);
+                        Console.WriteLine($"[Factory] Created: {device._name}");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"[Error] Could not save {device._name}: {ex.Message}");
+                    }
+                }
+            }
+
+
         }
     }   
 }

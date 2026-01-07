@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SmartHouse
 {
-    public interface IExternalDataService<T>
+    public interface IExternalDataService<T> where T : class
     {
         Task<T> GetBasicData(string key);
         Task <List<T>> GetData(string key);
