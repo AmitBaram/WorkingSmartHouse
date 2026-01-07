@@ -13,6 +13,11 @@ namespace SmartHouse
         public string _name { get ; set ; }
         public string _id { get ; set; }
 
+        public Boiler()
+        {
+
+        }
+
         public Boiler(Dictionary<DateTime, bool> schedualTime, bool isOn, string name)
         {
             SchedualTime = schedualTime;

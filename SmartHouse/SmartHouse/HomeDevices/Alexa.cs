@@ -11,6 +11,10 @@ namespace SmartHouse
         public bool _isOn { get; set; }
         public string _name { get; set; }
         public string _id { get; set; }
+        public Alexa()
+        {
+
+        }
         public Alexa(bool isOn, string name)
         {
             _isOn = isOn;

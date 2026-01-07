@@ -1,0 +1,42 @@
+{
+  "$type": "System.Collections.Generic.List`1[[SmartHouse.IDevice, SmartHouse]], mscorlib",
+  "$values": [
+    {
+      "$type": "SmartHouse.Alexa, SmartHouse",
+      "_isOn": true,
+      "_name": "Alexa_Home",
+      "_id": "ADO72JAP"
+    },
+    {
+      "$type": "SmartHouse.Boiler, SmartHouse",
+      "SchedualTime": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.DateTime, mscorlib],[System.Boolean, mscorlib]], mscorlib",
+        "2026-01-07T11:10:00": true,
+        "2026-01-07T16:10:00": false
+      },
+      "_isOn": false,
+      "_name": "Boiler",
+      "_id": "N2VLBIGQ"
+    },
+    {
+      "$type": "SmartHouse.SmartLight, SmartHouse",
+      "SchedualTime": {
+        "$type": "System.Collections.Generic.Dictionary`2[[System.DateTime, mscorlib],[System.Boolean, mscorlib]], mscorlib",
+        "2026-01-07T11:11:00": true,
+        "2026-01-07T16:11:00": false
+      },
+      "_isOn": true,
+      "_name": "SmartLight",
+      "_id": "T2HLBIRP"
+    },
+    {
+      "$type": "SmartHouse.AC, SmartHouse",
+      "_isOn": true,
+      "_name": "AC",
+      "_id": "AC_MANUAL_01",
+      "_Temperature": 24.0
+    }
+    
+    
+  ]
+}

@@ -12,6 +12,7 @@ namespace SmartHouse
         public bool _isOn { get ; set ; }
         public string _name { get; set; }
         public string _id { get ; set ; }
+        public SmartLight() { }
         public SmartLight(bool ison, Dictionary<DateTime, bool> schedualTime, string name)
         {
             _isOn = ison;

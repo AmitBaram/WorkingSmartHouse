@@ -11,12 +11,12 @@ namespace SmartHouse
     {
         // Dependencies
         private readonly ClockManager _clock;
-        private readonly SchedualDeviceHandler<ISchedualDevice> _deviceHandler;
+        private readonly SchedualDeviceHandler<IDevice> _deviceHandler;
         private readonly IExternalDataService<WeatherInfo> _externalDataService;
 
 
 
-        public App(ClockManager clock, SchedualDeviceHandler<ISchedualDevice> deviceHandler, IExternalDataService<WeatherInfo> externalDataService)
+        public App(ClockManager clock, SchedualDeviceHandler<IDevice> deviceHandler, IExternalDataService<WeatherInfo> externalDataService)
         {
             _clock = clock;
             _deviceHandler = deviceHandler;
@@ -26,7 +26,7 @@ namespace SmartHouse
         public async Task Start()
         {
             
-            if (!_deviceHandler.CheckIfDBExist())
+            if ( !_deviceHandler.CheckIfDBExist())
             {
                 // FactoryDevices is async, so we wait for it to finish
                 await _deviceHandler.FactoryDevices();

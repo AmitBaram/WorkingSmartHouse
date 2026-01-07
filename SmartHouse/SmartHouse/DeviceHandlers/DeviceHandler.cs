@@ -16,7 +16,7 @@ namespace SmartHouse
         {
             _itemDB = dataDevice;
         }
-        public bool CheckIfDBExist()
+        public bool  CheckIfDBExist()
         {
             if (_itemDB == null) return false;
 
@@ -82,22 +82,25 @@ namespace SmartHouse
 
         public async Task FactoryDevices()
         {
+            Console.WriteLine("[Factory] checking database...");
+
             DateTime date = DateTime.Now;
+            DateTime cleanDate = new DateTime(date.Year, date.Month, date.Day, date.Hour, date.Minute, 0);
+
             Dictionary<DateTime, bool> schedule = new Dictionary<DateTime, bool>();
-            schedule.Add(date, true);
-            schedule.Add(date.AddHours(5), false);
-            var list = new List<IDevice>();
-            IDevice Alexa = new Alexa(true, "Alexa_Home");
-            IDevice Boiler = new Boiler(schedule, false, "Boiler");
-            IDevice smartLight = new SmartLight(true, schedule, "smartLight");
-            IDevice AC = new AC(true, "AC", 24);
-            list.Add(Alexa);
-            list.Add(Boiler);
-            list.Add(smartLight);
-            list.Add(AC);
-            foreach (var device in list)
+            schedule.Add(cleanDate, true);
+            schedule.Add(cleanDate.AddHours(5), false);
+
+            var factoryList = new List<IDevice>
+    {
+        new Alexa(true, "Alexa_Home"),
+        new Boiler(schedule, false, "Boiler"),
+        new SmartLight(true, schedule, "smartLight"),
+        new AC(true, "AC", 24)
+    };
+
+            foreach (var device in factoryList)
             {
-                // We cast to T to ensure it fits the generic database
                 if (device is T typedDevice)
                 {
                     try
@@ -105,14 +108,14 @@ namespace SmartHouse
                         await _itemDB.SaveToDB(typedDevice);
                         Console.WriteLine($"[Factory] Created: {device._name}");
                     }
-                    catch (Exception ex)
+                    catch (Exception ex) // Capture the error variable 'ex'
                     {
+                        // FIX: Print the ACTUAL error message
                         Console.WriteLine($"[Error] Could not save {device._name}: {ex.Message}");
                     }
                 }
             }
-
-
         }
-    }   
+    }
+     
 }

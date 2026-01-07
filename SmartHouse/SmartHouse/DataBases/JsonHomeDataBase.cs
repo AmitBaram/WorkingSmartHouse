@@ -11,7 +11,7 @@ namespace SmartHouse
 {
     public class JsonHomeDataBase<T> : IJsonDataBase<T> where T : IDevice
     {
-        private readonly string _jsonPath = @"C:\Users\yeric\Documents\Amit_Pitoch\GitHub\SamertHouseWorking1\WorkingSmartHouse\SmartHouse\SmartHouse\DataBases\HomeDB\homejsonDB.json";
+        private readonly string _jsonPath = @"C:\Users\yeric\Documents\Amit_Pitoch\GitHub\SamertHouseWorking1\WorkingSmartHouse\SmartHouse\SmartHouse\DataBases\HomeDB\DeviceHomejsonDB.json";
 
         // Use List<T> instead of List<IDevice>
         List<T> _devices;
